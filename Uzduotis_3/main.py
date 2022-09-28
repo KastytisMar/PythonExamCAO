@@ -11,3 +11,8 @@ audi = {
   "year": 2005,
   "color": 'white',
 }
+
+def get_dict_values(audi):
+  '''Funkcija parodo "audi" zodyno reiksmes'''
+  return list(audi.values())
+print(get_dict_values(audi))
