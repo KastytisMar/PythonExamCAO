@@ -1,5 +1,3 @@
-import pprint
-
 # Duotas "users" sąrašas.
 
 # Parašykite dvi funkcijas, kurios:
@@ -26,3 +24,22 @@ users = [
   { 'id': '8', 'name': 'Simon Peterson', 'age': 30 },
   { 'id': '9', 'name': 'Daniel Cane', 'age': 51 },
 ]
+
+#1 taskas
+def get_user_average_age(users):
+  '''Funkcija grazina suapvalinta amziaus vidurki'''
+  ageSum = 0
+  for user in users:
+    ageSum += user["age"]
+  return round(ageSum/len(users))
+print(get_user_average_age(users))
+
+#2 taskas
+def get_users_name(users):
+    '''Funkcija kuri isrikiuoja sarasa alfabetiskai pagal vardus'''
+    filteredList=[]
+    for user in users:
+      filteredList.append(user["name"])
+    return sorted(filteredList)
+
+print(get_users_name(users))
