@@ -18,10 +18,12 @@
 
 class Movie:
     def __init__(self, title, director, budget):
+        '''Sukurta klase Movie su 3 savybemis'''
         self.title = title
         self.director = director
         self.budget = budget
     def was_expensive(self):
+        '''Sukurta funkcija kuri tikrina Movie klases Budged savybe ir grazina True arba False reiksme'''
         if self.budget > 100000000:
             return True
         else:
